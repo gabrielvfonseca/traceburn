@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "npm:install",
+      "npm:run:typecheck",
+      "npm:run:test",
+      "npm:run:build",
+      "npm:run:lint",
+      "npm:run:lint:fix",
+      "npm:run:format",
+      "npm:run:changeset",
+      "npm:run:version",
+      "npm:run:release",
+      "npx:tsc",
+      "npx:vitest",
+      "npx:tsup",
+      "npx:biome",
+      "npx:ultracite",
+      "npx:changeset",
+      "node:dist/cli.js",
+      "npm:publish"
+    ],
+    "deny": ["npm:publish:access:public"]
+  },
+  "hooks": {
+    "preCommand": [
+      {
+        "matcher": "npm run build",
+        "command": "npm run typecheck"
+      },
+      {
+        "matcher": "npm run test",
+        "command": "npm run lint"
+      }
+    ],
+    "postCommand": [
+      {
+        "matcher": "npm run changeset",
+        "command": "git add .changeset/*.md"
+      }
+    ]
+  },
+  "environment": {
+    "NODE_ENV": "development",
+    "NO_COLOR": "0"
+  },
+  "model": "claude-sonnet-4-5",
+  "maxThinkingTokens": 4000
+}

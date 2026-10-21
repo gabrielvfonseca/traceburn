@@ -1,0 +1,34 @@
+{
+  "$schema": "https://ultracite.com/schema/ultracite.json",
+  "version": 1,
+  "linters": [
+    {
+      "name": "biome",
+      "version": "2.5.15",
+      "configFile": "biome.json",
+      "checkCommand": "biome check",
+      "fixCommand": "biome check --write",
+      "formatCommand": "biome format"
+    },
+    {
+      "name": "typescript",
+      "version": "5.7.2",
+      "checkCommand": "tsc --noEmit",
+      "configFile": "tsconfig.json"
+    },
+    {
+      "name": "vitest",
+      "version": "2.1.8",
+      "checkCommand": "vitest run",
+      "configFile": "vitest.config.ts"
+    }
+  ],
+  "files": {
+    "includes": ["src/**", "tests/**", "biome.json", "package.json", "tsconfig.json", "vitest.config.ts", "tsup.config.ts"],
+    "excludes": ["dist", "node_modules", ".changeset", "docs"]
+  },
+  "ci": {
+    "failOnWarning": true,
+    "maxDiagnostics": 50
+  }
+}

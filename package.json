@@ -1,0 +1,72 @@
+{
+  "name": "agentburn",
+  "version": "0.1.0",
+  "description": "See where your agent burned money and tokens. A deterministic linter for agent runs — token hotspots, loops, cache waste, and structural defects. No LLM judge.",
+  "keywords": [
+    "ai-agents",
+    "llm",
+    "observability",
+    "tokens",
+    "cost",
+    "linter",
+    "traces",
+    "claude-code",
+    "tool-calling"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "agentburn": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "check": "ultracite check",
+    "changeset": "changeset",
+    "ci": "npm run typecheck && npm run lint && npm test",
+    "dev": "tsup --watch",
+    "fix": "ultracite fix",
+    "format": "biome format",
+    "lint": "biome check src tests biome.json package.json tsconfig.json vitest.config.ts tsup.config.ts",
+    "lint:fix": "biome check --write",
+    "release": "changeset publish",
+    "version": "changeset version",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "picocolors": "^1.1.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "@changesets/cli": "^3.0.3",
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.28.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "ultracite": "^8.0.1",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "allowScripts": {
+    "esbuild@0.27.7": true,
+    "esbuild@0.21.5": true
+  }
+}
