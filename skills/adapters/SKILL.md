@@ -1,6 +1,6 @@
 # Trace adapters skill
 
-This skill describes how agentburn loads and normalizes agent execution traces into the canonical `AgentRun` schema.
+This skill describes how traceburn loads and normalizes agent execution traces into the canonical `AgentRun` schema.
 
 ## Loading pipeline
 

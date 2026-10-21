@@ -1,5 +1,5 @@
 {
-  "name": "agentburn",
+  "name": "traceburn",
   "version": "0.1.0",
   "description": "See where your agent burned money and tokens. A deterministic linter for agent runs — token hotspots, loops, cache waste, and structural defects. No LLM judge.",
   "keywords": [
@@ -24,7 +24,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "agentburn": "dist/cli.js"
+    "traceburn": "dist/cli.js"
   },
   "files": [
     "dist",

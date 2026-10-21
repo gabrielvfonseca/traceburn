@@ -1,6 +1,6 @@
-# Project instructions for agent-lint (agentburn)
+# Project instructions for agent-lint (traceburn)
 
-This repo is `agentburn`, a deterministic CLI linter for agent execution traces.
+This repo is `traceburn`, a deterministic CLI linter for agent execution traces.
 
 ## Commands
 
@@ -29,7 +29,7 @@ This repo is `agentburn`, a deterministic CLI linter for agent execution traces.
 - `src/rules/usage.ts` — `collectUsage`, `totalCost`, `unpricedModels`
 - `src/pricing/index.ts` — pricing table, `estimateCost`, `formatUsd`, `formatTokens`
 - `src/reporters/terminal.ts` — `renderReport`, `renderJson`
-- `src/cli.ts` — commander CLI (`agentburn check`)
+- `src/cli.ts` — commander CLI (`traceburn check`)
 - `tests/` — vitest tests, `helpers.ts` (`makeCall`, `makeResult`, `makeAssistantTurn`, `makeRun`)
 - `fixtures/claude-code/fixture-session-001.jsonl` — pinned golden fixture
 - `docs/` — snake_case uppercase `*.md` documentation (`INSTALL_GUIDE.md`, `USAGE_GUIDE.md`, `API_REFERENCE.md`, `RULES_REFERENCE.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `ARCHITECTURE.md`)

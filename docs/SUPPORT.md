@@ -9,7 +9,7 @@
 ## What we support
 
 - Claude Code `.jsonl` session transcripts
-- agentburn native `.json` run files
+- traceburn native `.json` run files
 - Node.js >= 18
 
 ## What we don't do

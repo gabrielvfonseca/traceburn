@@ -1,24 +1,24 @@
 # CLI skill
 
-This skill describes how to work with the agentburn command-line interface (`agentburn check`).
+This skill describes how to work with the traceburn command-line interface (`traceburn check`).
 
 ## CLI entry point
 
-- **Binary:** `agentburn` → `dist/cli.js`
+- **Binary:** `traceburn` → `dist/cli.js`
 - **Framework:** commander
 - **Build:** `tsup` with entry points `src/index.ts` and `src/cli.ts`
 
-## `agentburn check`
+## `traceburn check`
 
 ```
-agentburn check <files...> [options]
+traceburn check <files...> [options]
 ```
 
 ### Arguments
 
 | Argument | Description |
 |----------|-------------|
-| `<files...>` | One or more Claude Code `.jsonl` sessions or agentburn native run `.json` files |
+| `<files...>` | One or more Claude Code `.jsonl` sessions or traceburn native run `.json` files |
 
 ### Options
 
@@ -95,7 +95,7 @@ Behavior:
 Produces a human-readable terminal report:
 
 ```
-● agentburn — run-id · claude-code · 6 priced turn(s) · 5 tool call(s) · est. $0.35 · 270.6k tokens
+● traceburn — run-id · claude-code · 6 priced turn(s) · 5 tool call(s) · est. $0.35 · 270.6k tokens
   $0.35  AL202  info  est. $0.35 across 6 priced turn(s), 270.6k tokens
         pricing as of 2026-10 (override with --pricing)
          AL104  candidate  `Bash` ran 3× with identical args and identical results
@@ -139,25 +139,25 @@ Produces machine-readable JSON with `run`, `pricing`, `findings`, `suppressions`
 
 ```bash
 # Lint a single Claude Code session
-agentburn check ~/.claude/projects/*/session.jsonl
+traceburn check ~/.claude/projects/*/session.jsonl
 
 # Lint multiple files
-agentburn check trace1.jsonl trace2.jsonl
+traceburn check trace1.jsonl trace2.jsonl
 
 # Fail CI on anything candidate or worse
-agentburn check trace.jsonl --fail-on candidate
+traceburn check trace.jsonl --fail-on candidate
 
 # JSON output for CI integration
-agentburn check trace.jsonl --json
+traceburn check trace.jsonl --json
 
 # Use a custom pricing table
-agentburn check trace.jsonl --pricing pricing.json
+traceburn check trace.jsonl --pricing pricing.json
 
 # Disable color for non-TTY output
-agentburn check trace.jsonl --no-color
+traceburn check trace.jsonl --no-color
 
 # Adjust hotspot sensitivity
-agentburn check trace.jsonl --hotspot-share 0.10
+traceburn check trace.jsonl --hotspot-share 0.10
 ```
 
 ## Related

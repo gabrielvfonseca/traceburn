@@ -1,6 +1,6 @@
 # Lint rules skill
 
-This skill describes how to work with agentburn's deterministic lint rules. Every rule is a `Rule` object exported from `src/rules/alNNN.ts` and registered in `src/rules/index.ts`.
+This skill describes how to work with traceburn's deterministic lint rules. Every rule is a `Rule` object exported from `src/rules/alNNN.ts` and registered in `src/rules/index.ts`.
 
 ## Rule architecture
 

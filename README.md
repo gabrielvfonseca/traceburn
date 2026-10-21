@@ -1,13 +1,13 @@
-# agentburn
+# Traceburn
 
 See where your agent burned money and tokens. A deterministic linter for agent runs — token hotspots, loops, cache waste, and structural defects. No LLM judge.
 
-`agentburn` reads an agent execution trace (a Claude Code session `.jsonl` or an agentburn native run `.json`) after the run and reports structural defects deterministically, with exact trace evidence and a CI exit code.
+`traceburn` reads an agent execution trace (a Claude Code session `.jsonl` or an traceburn native run `.json`) after the run and reports structural defects deterministically, with exact trace evidence and a CI exit code.
 
 ## Install
 
 ```bash
-npm install -g agentburn
+npm install -g traceburn
 ```
 
 Or run from source:
@@ -20,7 +20,7 @@ npm run build
 ## Usage
 
 ```bash
-agentburn check <files...> [options]
+traceburn check <files...> [options]
 ```
 
 Lint one or more agent session traces.
@@ -45,24 +45,24 @@ Exit codes:
 
 ```bash
 # Lint a Claude Code session transcript
-agentburn check ~/.claude/projects/*/session.jsonl
+traceburn check ~/.claude/projects/*/session.jsonl
 
 # Fail CI on hard defects only (default)
-agentburn check trace.jsonl
+traceburn check trace.jsonl
 
 # Fail CI on anything candidate or worse
-agentburn check trace.jsonl --fail-on candidate
+traceburn check trace.jsonl --fail-on candidate
 
 # JSON output for CI
-agentburn check trace.jsonl --json
+traceburn check trace.jsonl --json
 
 # Use a custom pricing table
-agentburn check trace.jsonl --pricing pricing.json
+traceburn check trace.jsonl --pricing pricing.json
 ```
 
 ## How it works
 
-`agentburn` normalizes every supported trace into a canonical run schema, then runs deterministic rules over it. Every rule emits findings with:
+`traceburn` normalizes every supported trace into a canonical run schema, then runs deterministic rules over it. Every rule emits findings with:
 - the rule id and tier,
 - a human summary,
 - evidence lines quoting the trace,
@@ -79,7 +79,7 @@ Findings fall into tiers:
 | `warning` | Efficiency issue (hotspot, bloat) | review |
 | `info` | Estimated run cost | informational |
 
-By default `agentburn check` exits `0` unless a `hard_defect` is found. Use `--fail-on` to tighten the threshold.
+By default `traceburn check` exits `0` unless a `hard_defect` is found. Use `--fail-on` to tighten the threshold.
 
 ## Rules
 

@@ -93,7 +93,7 @@ export class UnrecognizedFormatError extends Error {
   readonly filePath: string;
   constructor(filePath: string) {
     super(
-      `${filePath}: unrecognized trace format (expected a Claude Code session .jsonl or an agentburn native run .json)`,
+      `${filePath}: unrecognized trace format (expected a Claude Code session .jsonl or an traceburn native run .json)`,
     );
     this.name = 'UnrecognizedFormatError';
     this.filePath = filePath;

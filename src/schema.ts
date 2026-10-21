@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-/** Canonical agentburn run schema (v1). Adapters normalize every source into this. */
+/** Canonical traceburn run schema (v1). Adapters normalize every source into this. */
 
 export const SCHEMA_VERSION = 1;
 

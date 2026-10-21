@@ -1,11 +1,11 @@
 # Usage Guide
 
-## `agentburn check`
+## `traceburn check`
 
 Lint one or more agent session traces.
 
 ```bash
-agentburn check <files...> [options]
+traceburn check <files...> [options]
 ```
 
 ### Options
@@ -31,16 +31,16 @@ agentburn check <files...> [options]
 
 ```bash
 # Lint a Claude Code session transcript
-agentburn check ~/.claude/projects/*/session.jsonl
+traceburn check ~/.claude/projects/*/session.jsonl
 
 # Fail CI on anything candidate or worse
-agentburn check trace.jsonl --fail-on candidate
+traceburn check trace.jsonl --fail-on candidate
 
 # JSON output for CI
-agentburn check trace.jsonl --json
+traceburn check trace.jsonl --json
 
 # Use a custom pricing table
-agentburn check trace.jsonl --pricing pricing.json
+traceburn check trace.jsonl --pricing pricing.json
 ```
 
 ## Rules

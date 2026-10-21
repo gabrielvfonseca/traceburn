@@ -11,7 +11,7 @@
 7. **Usage** (`src/rules/usage.ts`) — `collectUsage`, `totalCost`, `unpricedModels`
 8. **Pricing** (`src/pricing/index.ts`) — pricing table, `estimateCost`, `formatUsd`, `formatTokens`
 9. **Reporters** (`src/reporters/terminal.ts`) — `renderReport`, `renderJson`
-10. **CLI** (`src/cli.ts`) — commander CLI (`agentburn check`)
+10. **CLI** (`src/cli.ts`) — commander CLI (`traceburn check`)
 
 ## Data flow
 

@@ -1,6 +1,6 @@
 # Install Guide
 
-See where your agent burned money and tokens. agentburn is a deterministic linter for agent execution traces — token hotspots, loops, cache waste, and structural defects. No LLM judge.
+See where your agent burned money and tokens. traceburn is a deterministic linter for agent execution traces — token hotspots, loops, cache waste, and structural defects. No LLM judge.
 
 ## Requirements
 
@@ -10,7 +10,7 @@ See where your agent burned money and tokens. agentburn is a deterministic linte
 ## Install from npm
 
 ```bash
-npm install -g agentburn
+npm install -g traceburn
 ```
 
 ## Install from source
@@ -22,17 +22,17 @@ npm install
 npm run build
 ```
 
-The CLI entry point is `dist/cli.js`, exposed as the `agentburn` binary.
+The CLI entry point is `dist/cli.js`, exposed as the `traceburn` binary.
 
 ## Verify
 
 ```bash
-agentburn --version
+traceburn --version
 ```
 
 ## Supported trace formats
 
 - Claude Code session transcripts (`.jsonl` under `~/.claude/projects/*/`)
-- agentburn native run files (`.json` matching the canonical run schema)
+- traceburn native run files (`.json` matching the canonical run schema)
 
 See `USAGE_GUIDE.md` for the full command reference.

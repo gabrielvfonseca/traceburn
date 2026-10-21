@@ -1,11 +1,11 @@
-# agentburn — project skill
+# traceburn — project skill
 
-This skill describes how to work with `agentburn`, a deterministic CLI linter for agent execution traces. It ingests a trace (Claude Code `.jsonl` or native `.json`) and flags redundant tool calls, context bloat, infinite-ish loops, token hotspots, and structural defects — with no LLM judge.
+This skill describes how to work with `traceburn`, a deterministic CLI linter for agent execution traces. It ingests a trace (Claude Code `.jsonl` or native `.json`) and flags redundant tool calls, context bloat, infinite-ish loops, token hotspots, and structural defects — with no LLM judge.
 
 ## Project identity
 
-- **Name:** agentburn (CLI binary: `agentburn`)
-- **Package:** `agentburn` (ESM, NodeNext, Node >= 18)
+- **Name:** traceburn (CLI binary: `traceburn`)
+- **Package:** `traceburn` (ESM, NodeNext, Node >= 18)
 - **Entry:** `dist/cli.js` (exposed via `bin`)
 - **License:** MIT
 - **Version:** 0.1.0
@@ -41,7 +41,7 @@ agent-lint/
 │   └── ARCHITECTURE.md
 ├── src/
 │   ├── index.ts         # Public exports
-│   ├── cli.ts           # Commander CLI (`agentburn check`)
+│   ├── cli.ts           # Commander CLI (`traceburn check`)
 │   ├── loaders.ts       # Format detection + loading (.jsonl / .json)
 │   ├── lint.ts          # lintRun, exit-code logic
 │   ├── schema.ts        # Canonical AgentRun schema + helpers
@@ -108,7 +108,7 @@ agent-lint/
 ## CLI usage
 
 ```bash
-agentburn check <files...> [options]
+traceburn check <files...> [options]
 ```
 
 Options:

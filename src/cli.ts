@@ -81,7 +81,7 @@ function checkFiles(files: readonly string[], options: CheckOptions): number {
 const program = new Command();
 
 program
-  .name('agentburn')
+  .name('traceburn')
   .description(
     'See where your agent burned money and tokens. Deterministic linter for agent runs — token hotspots, loops, cache waste, structural defects. No LLM judge.',
   )
@@ -92,7 +92,7 @@ program
   .description('lint one or more agent session traces')
   .argument(
     '<files...>',
-    'Claude Code .jsonl session(s) or agentburn native run .json',
+    'Claude Code .jsonl session(s) or traceburn native run .json',
   )
   .option('--json', 'machine-readable JSON output')
   .option(

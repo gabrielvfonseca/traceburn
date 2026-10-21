@@ -10,6 +10,6 @@ Dependencies are pinned via `package-lock.json`. Changesets are used for version
 
 ## Data handling
 
-`agentburn` reads agent execution traces locally. Tool arguments and results may contain sensitive information. Findings include evidence excerpts from the trace — consider redacting traces before sharing them in public issues or CI artifacts.
+`traceburn` reads agent execution traces locally. Tool arguments and results may contain sensitive information. Findings include evidence excerpts from the trace — consider redacting traces before sharing them in public issues or CI artifacts.
 
 Pricing estimates use a built-in, date-stamped table and never transmit usage data externally.

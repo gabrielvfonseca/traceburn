@@ -51,7 +51,7 @@ export function renderReport(
     (event: RunEvent) => event.type === 'tool_call',
   ).length;
   const header =
-    `${p.green('●')} agentburn — ${p.bold(report.run.id)} · ` +
+    `${p.green('●')} traceburn — ${p.bold(report.run.id)} · ` +
     `${report.run.source} · ${turns.length} priced turn(s) · ${toolCallCount} tool call(s) · ` +
     `est. ${cost === undefined ? p.dim('cost n/a') : p.bold(formatUsd(cost))}`;
   const priced =

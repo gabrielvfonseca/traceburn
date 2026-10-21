@@ -2,7 +2,7 @@
 
 ## Canonical run schema (`AgentRun`)
 
-`agentburn` normalizes every supported trace into this canonical schema:
+`traceburn` normalizes every supported trace into this canonical schema:
 
 ```ts
 interface AgentRun {
@@ -44,7 +44,7 @@ interface ToolDeclaration {
 ## Programmatic API
 
 ```ts
-import { loadRun, lintRun, renderReport } from 'agentburn';
+import { loadRun, lintRun, renderReport } from 'traceburn';
 
 const { run, format } = loadRun('session.jsonl');
 const report = lintRun(run, {}, format);
